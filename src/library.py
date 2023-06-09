@@ -13,6 +13,7 @@ class Library:
     def __init__(self):
         self.borrowers = {}
         self.logger = Logger()
+        self.__logFIleName = "logger.txt"
 
     """
     Description: Add a borrower to the system
@@ -27,7 +28,7 @@ class Library:
         print(f"\n===> New borrower added to the system: {person.name}...\n")
 
         # Log the fact the new borrower has borrowed a book and been added to the system
-        self.logger.log(f"[{date}] - New borrower added: {person.name}, Book: {book.title}\n")
+        self.logger.log(self.__logFIleName, f"[{date}] - New borrower added: {person.name}, Book: {book.title}\n")
 
     """
     Description: Display the current borrowers within the system
@@ -41,3 +42,9 @@ class Library:
 
     def getNumberOfBorrowers(self):
         return len(self.borrowers)
+    
+    def readLog(self):
+        return self.logger.readLog(self.__logFIleName)
+    
+    def removeLog(self):
+        self.logger.deleteLogFile(self.__logFIleName)

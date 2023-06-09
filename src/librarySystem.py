@@ -64,6 +64,18 @@ def main():
     #   Should just display 2 borrowers
     print(f"\n===> Dictionary size: {library.getNumberOfBorrowers()}")
     library.displayBorrowers()
+
+    # Now lets read from the log file, logger.txt..
+    print(f"\nLog FIle...")
+    print(f"{library.readLog()}\n")
+
+    # Now let delete the log file, can comment out if you wish to just keep adding to it :-)
+    library.removeLog()
+    
+    # Now lets read from the log file, logger.txt..
+    print(f"\nLog FIle...")
+    print(f"{library.readLog()}\n")
+
 ################################################################################################
 
 """
