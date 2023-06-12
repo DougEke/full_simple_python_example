@@ -49,6 +49,7 @@ Log FIle...
 Log FIle...
 logger.txt does not exists..
 None
+
 ===============================================================================================
 
 You can get hold of the files via the 'Code' option within github at https://github.com/DougEke/full_simple_python_example
