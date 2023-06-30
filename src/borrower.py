@@ -10,6 +10,7 @@ from dataclasses import dataclass
 from book import Book
 from person import Person
 
+
 @dataclass
 class Borrower:
     def __init__(self, person: Person, book: Book, date):
@@ -20,15 +21,15 @@ class Borrower:
     @property
     def person(self):
         return self.__person
-    
+
     @property
     def book(self):
         return self.__book
-    
+
     @property
     def date(self):
         return self.__date
 
     # Display the information of the borrower...
     def borrowerInfo(self):
-        return f"\n***Borrower***\nDate: {self.date}\nName: {self.person}\nBook: {self.book}"    
+        return f"\n***Borrower***\nDate: {self.date}\nName: {self.person}\nBook: {self.book}"

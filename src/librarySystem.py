@@ -4,17 +4,18 @@ This is a simple test app that tests that things are working, not a formal test 
 
 import datetime
 import uuid
+import library
+
 from book import Book
-from library import Library
 from member import Member
 from guest import Guest
 
 
-library = Library()
-
 """
 Functions need to be declared before they are used
 """
+
+
 def createperson(name, dob, memno, type):
     # Guest takes name, dob, date
     if type == "guest":
@@ -23,11 +24,14 @@ def createperson(name, dob, memno, type):
     # Member takes, name, dob, memno
     return Member(name, dob, memno)
 
+
 def createBook(author, title, isbn):
     return Book(author, title, isbn)
 
+
 def getUUID():
     return uuid.uuid4()
+
 
 """
 End of function declarations
@@ -38,6 +42,8 @@ main application function.
 Not really needed s we could have simply just put all this outside of a function, but
 kind of keeps it tidy, I believe.
 """
+
+
 ######################################Main Application Code#####################################
 def main():
     # Simple check to see that the dictionary/library is empty
@@ -46,6 +52,7 @@ def main():
     # Create a person who is a member...
     person = Member("Doug", datetime.date(1982, 3, 5), "mem001")
     book = Book("J.K. Rowling", "Harry Potter", getUUID())
+
     library.addBorrower("1", person, book)
 
     # Lets just check that the borrower has been added:
@@ -65,16 +72,17 @@ def main():
     print(f"\n===> Dictionary size: {library.getNumberOfBorrowers()}")
     library.displayBorrowers()
 
-    # Now lets read from the log file, logger.txt..
+    # Now lets read from the file, library.txt..
     print(f"\nLog FIle...")
-    print(f"{library.readLog()}\n")
+    print(f"{library.readFile()}\n")
 
     # Now let delete the log file, can comment out if you wish to just keep adding to it :-)
-    library.removeLog()
-    
-    # Now lets read from the log file, logger.txt..
+    # library.removeFile()
+
+    # Now lets read from the log file, library.txt..
     print(f"\nLog FIle...")
-    print(f"{library.readLog()}\n")
+    print(f"{library.readFile()}\n")
+
 
 ################################################################################################
 

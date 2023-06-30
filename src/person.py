@@ -8,21 +8,46 @@ from dataclasses import dataclass
 We're using the @dataclass tag here so don'tneed to supply any property or setter
 functions, as well as a display function.
 """
+
+
 @dataclass
 class Person:
+    name: str
+    age: date
+
     def __init__(self, name, dob):
-        self.__name = name
-        self.__age = self.calculateAge(dob)
+        self.name = name
+        self.age = self.calculateAge(dob)
 
     @classmethod
     def calculateAge(self, dob):
         today = date.today()
         return today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
-    
-    @property
-    def name(self):
-        return self.__name
-    
-    @property
-    def age(self):
-        return self.__age
+
+    # @property
+    # def name(self):
+    #     return self.__name
+
+    # @property
+    # def age(self):
+    #     return self.__age
+
+
+# @dataclass
+# class Person:
+#     def __init__(self, name, dob):
+#         self.__name = name
+#         self.__age = self.calculateAge(dob)
+
+#     @classmethod
+#     def calculateAge(self, dob):
+#         today = date.today()
+#         return today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
+
+#     @property
+#     def name(self):
+#         return self.__name
+
+#     @property
+#     def age(self):
+#         return self.__age

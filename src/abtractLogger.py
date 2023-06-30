@@ -9,8 +9,8 @@ out within the class that implements it.
 
 from abc import ABC, abstractmethod
 
-class AbstractLogger:
 
+class AbstractLogger:
     @abstractmethod
     def log(self):
         pass
