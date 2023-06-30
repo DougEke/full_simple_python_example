@@ -1,2 +1,7 @@
 [2023-06-30 16:41:59] - New borrower added: Doug, Book: Harry Potter
 [2023-06-30 16:41:59] - New borrower added: John Smith, Book: The Shining
+[2023-06-30 16:48:03] - New borrower added: Doug, Book: Harry Potter
+[2023-06-30 16:48:26] - New borrower added: Doug, Book: Harry Potter
+[2023-06-30 16:48:57] - New borrower added: Doug, Book: Harry Potter
+[2023-06-30 16:49:16] - New borrower added: Doug, Book: Harry Potter
+[2023-06-30 16:49:16] - New borrower added: John Smith, Book: The Shining
